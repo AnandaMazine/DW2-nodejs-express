@@ -89,3 +89,46 @@ let dobro = function(x){
 }
 console.log(dobro(15))
 console.log(`O dobro do numero é ${dobro (15)}!`)
+
+// ARROW FUNCTION COM PARÂMETRO ÚNICO
+// FUNÇÃO FLECHA
+// Tipo de função anônima; forma reduzida
+
+const Dobro = (x) => {
+    //Para declarar dois parâmetros ou mais, manter os parênteses
+    return x * 2;
+  };
+  
+  console.log(Dobro(20));
+  console.log(`O dobro do número é: ${Dobro(20)}`);
+  
+  
+  // ARROW FUNCTION COM MAIS DE UM PARÂMETRO
+  
+  const calc = (num1, operador, num2) => {
+    return eval(`${num1} ${operador} ${num2}`); // eval = função nativa do Javascript
+  };
+  
+  console.log(`O resultado da operação é: ${calc(6, "*", 6)}`);
+  
+  
+  // SIMPLIFICANDO ARROW FUNCTION
+  
+  const Calc = (num1, operador, num2) => eval(`${num1} ${operador} ${num2}`); 
+  
+    console.log(`O resultado da operação é: ${Calc(7, "*", 7)}`);
+  
+  
+  // IIFE - Immediately Invoked Function Expression
+  // Função Imediata
+  
+  const life = (function() {
+      console.log("Estoy")
+  })
+  
+  //IIFE com parâmetro
+  
+  const start = (function(app){
+      console.log(`Executando imediatamente o app ${app}.`)
+  })
+  ("Whatsapp")
